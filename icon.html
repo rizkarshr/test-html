@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="public/gmbr/logo.png">
+        <title>Front End ADE - Hari Ke-2 dan 3</title>
+        <style>
+            .body {background-color: rgb(235, 233, 217);}
+            .h1 {color: rgb(99, 6, 57);}
+            .p {color: brown;}
+            .table-css,.th-css,.td-css{
+                border: 1px solid black;
+                border-radius: 3px;
+            }
+            .table-flat,.th-flat,.td-flat{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="public/css/jquery.dataTables.css"> <!-- sumber: https://datatables.net/manual/installation#CDN-->
+        <!--New Component-->
+        <link rel="stylesheet" type="text/css" href="public/css/buttons.datTables.min.css"> <!-- sumber: https://datatables.net/extensions/buttons/examples/initialisation/export.html-->
+      </head>
+
+        <body class="body">
+            <h1 class="p">Rizka Rihul Sahara</h1>
+            <p class="h1">FrontEnd Developer</p>
+
+            <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+            <div style="margin-bottom: 25px;"></div>
+            <a href="index.html" style="color:rgb(42, 165, 69)">Go to FrontEnd Pertemuan Hari Ke-1!</a>
+            <br>
+
+            <!--Tabel 1-->
+            <br>
+            <table style="width:100%" class="table-css">
+                <tr>
+                  <th class="th-css">Person 1</th>
+                  <th class="th-css">Person 2</th>
+                  <th class="th-css">Person 3</th>
+                </tr>
+                <tr>
+                  <td class="td-css">Seokjin</td>
+                  <td class="td-css">Junkyu</td>
+                  <td class="td-css">Jisoo</td>
+                </tr>
+                <tr>
+                  <td class="td-css">Seoul</td>
+                  <td class="td-css">London</td>
+                  <td class="td-css">Busan</td>
+                </tr>
+              </table>
+
+              <!--Tabel 2-->
+              <br>
+              <table style="width:100%" class="table-flat">
+                <tr>
+                  <th class="th-flat">Nama Barang</th>
+                  <th class="th-flat">Stok</th>
+                  <th class="th-flat">Harga</th>
+                </tr>
+                <tr>
+                  <td class="td-flat">Kerudung</td>
+                  <td class="td-flat">20</td>
+                  <td class="td-flat">30000</td>
+                </tr>
+                <tr>
+                  <td class="td-flat">Celana Jeans</td>
+                  <td class="td-flat" rowspan="2">10</td>
+                  <td class="td-flat">55000</td>
+                </tr>
+                <tr>
+                    <td class="td-flat">Celana Kain</td>
+                    <td class="td-flat">52000</td>
+                  </tr>
+                  <tr>
+                    <td class="td-flat" colspan="2">Jumlah</td>
+                    <td class="td-flat">59.801.144.000</td>
+                  </tr>
+              </table>
+
+              <!--Tabel 3-->
+              <br>
+              <table id="table_id" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                    </tr>
+                    <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                    </tr>
+                </tbody>
+              </table>
+        
+        </body>
+        <script src="public/js/jquery-3.6.0.js" type="text/javascript" charset="utf8""></script> <!--sumber : https://releases.jquery.com/-->
+        <script type="text/javascript" charset="utf8" src="public/js/jquery.dataTables.js"></script>
+        
+        <!---New Component; Sumber : https://datatables.net/extensions/buttons/examples/initialisation/export.html-->
+        <script type="text/javascript" charset="utf8" src="public/js/dataTables.buttons.min.js"></script> <!--di klik linknya trus di copas di folder js dg nama file pake kata belakang link yg di klik. trus nama yg di vscode diganti public/js/nama file -->
+        <script type="text/javascript" charset="utf8" src="public/js/jszip.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="public/js/pdfmake.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="public/js/vfs_fonts.js"></script>
+        <script type="text/javascript" charset="utf8" src="public/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="public/js/buttons.print.min.js"></script>
+        <script>
+           $(document).ready(function() {
+            $('#table_id').DataTable( {
+                dom: 'Bfrtip',
+                buttons: ['pdf']
+                });
+            });
+        </script>
+</html>

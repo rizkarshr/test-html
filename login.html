@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front End ADE - Hari Ke-7</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+<body>
+
+<!-- Header -->
+<!--<section>
+	<div class="menu-header-panel row">
+		<div class="col-md-11">
+			<div class="menu">
+				<ul>
+					<a id="menu-logo"><li>Logo</li></a>
+					<a href="home.html"><li>Home</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-1 text-right">
+			<div class="menu">
+				<ul>
+					<a id="menu-login" href="login.html" class="menu-active"><li>Login</li></a>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>-->
+
+<!-- Main Menu -->
+<section>
+	<div class="main-menu">
+		<div class="row">
+			<div class="col-md-4">&nbsp;</div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<h3 class="text-center">Login</h3>
+						<div class="mt-15 text-center">
+							<input class="input-login" type="text" placeholder="USERNAME" id="username">
+							<input class="input-login mt-15" type="password" placeholder="PASSWORD" id="password">
+						</div>
+						<label class="label-forgot-password mt-15">Forgot Password ?</label>
+						<div class="text-right">
+							<button class="btn btn-success mt-15" id="btn-login">Sign In</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">&nbsp;</div>
+		</div>
+	</div>
+</section>
+
+<!-- Footer -->
+<!--<section id="footer">
+	<div class="footer-panel"><label>@rizkarihulsahara</label></div>
+</section>-->
+</body>
+<script src="public/js/jquery-3.6.0.js" type="text/javascript" charset="utf8"></script>
+<script>
+	$(document).ready( function () {
+        $('#btn-login').click(function(){
+			let username = $('#username').val()
+			let password = $('#password').val()
+			if (username == "rizka rihul sahara" && password == "220405") {
+				alert("Anda Berhasil Login");
+				window.location.href="https://www.google.com/"//direct tombol sign in nya disini --> halaman directnya : "https://www.google.com/"
+			} else {
+				alert("Username & Password Salah");
+			}
+    	});
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
